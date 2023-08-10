@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <script src="scripts/script.js"></script>
+    
 </head>
 <body>
     <div class="section" id="header">
@@ -131,7 +132,7 @@
                     <div class="title">Project 1</div>
                     <div class="short-desc">Small project showcasing xyz.</div>
                     <a href="#my-projects">
-                        <img src="img/link-ico.png"/>
+                        <img src="img/link-ico.png" alt="external-link-ico">
                     </a>
                 </div>
             </div>
@@ -140,7 +141,7 @@
                     <div class="title">Project 2</div>
                     <div class="short-desc">Small project showcasing xyz.</div>
                     <a href="#my-projects">
-                        <img src="img/link-ico.png"/>
+                        <img src="img/link-ico.png" alt="external-link-ico">
                     </a>
                 </div>
             </div>
@@ -149,7 +150,7 @@
                     <div class="title">Project 3</div>
                     <div class="short-desc">Small project showcasing xyz.</div>
                     <a href="#my-projects">
-                        <img src="img/link-ico.png"/>
+                        <img src="img/link-ico.png" alt="external-link-ico">
                     </a>
                 </div>
             </div>
@@ -157,11 +158,45 @@
         <a href="#">See more</a>
     </div>
     <div class="section part-section-50" id="contact">
-        asdfgsdfhgfsdtgh
+        <h1 class="section-title">Contact me</h1>
+        <div class="content">
+            <div class=" col left-col">
+                <img src="img/message-ico.png" alt="message-ico" class="ico-100">
+                <a href="https://github.com/BedkowskiP">
+                    <img src="img/github-ico.png" alt="github-ico" class="ico-30">
+                    <span>
+                        My github
+                    </span>
+                </a>
+            </div>
+            <div class="col right-col">
+                <p>
+                    Do you have a question? Just fill out the form fields.
+                </p>
+                <form>
+                    <p>
+                        <input type="text" name="name" placeholder="Your name" id="form-name">
+                        <span class="error hidden" id="form-name-err">!</span>
+                    </p>
+                    <p>
+                        <input type="text" name="email" placeholder="Your email" id="form-email">
+                        <span class="error hidden" id="form-email-err">!</span>
+                    </p>
+                    <p>
+                        <textarea name="message" placeholder="Your message" id="form-message"></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Send message" id="form-submit-btn" disabled>
+                    </p>
+                    
+                </form>
+            </div>
+        </div>
     </div>
     <div class="section" id="footer">
         <p>2023 &copy; Piotr Będkowski</p>
     </div>
     <script src="scripts/anim.js"></script>
+    <script src="scripts/form.js"></script>
 </body>
 </html>

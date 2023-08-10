@@ -347,9 +347,76 @@ html, body{
     background-color: var(--redish-text-color);
     color: var(--main-text-color);
 }
+/* contact */
+
+#contact div.content {
+    min-height: 500px;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffffff09;
+    position: relative;
+}
+#contact div.content > div.col{
+    flex: 1;
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#contact div.content > div.left-col{
+    background-color: #871618;
+}
+#contact div.content > div.left-col > img{
+    filter: invert(100%);
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+#contact div.content > div.left-col > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    position: relative;
+    width: 200px;
+    height: 30px;
+}
+#contact div.content > div.left-col > a img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: invert(100%);
+}
+#contact div.content > div.left-col > a span{
+    position: absolute;
+    left: 35px;
+    top: 0;
+    display: block;
+    width: 170px;
+}
+#contact div.content > div.right-col{
+    flex: 2;
+    justify-content: flex-start;
+}
+#contact div.content > div.right-col > p{
+    margin: 20px 0px;
+}
+#contact div.content > div.right-col > form{
+    width: 90%;
+}
+
 /* other classes */
 
-
+.ico-30{
+    width: 30px;
+}
+.ico-100{
+    width: 100px;
+}
 .content {
     width: 80%;
     min-height: 80%;
