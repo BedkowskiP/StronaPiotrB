@@ -7,7 +7,7 @@
     --redish-text-color: #871618;
 
     --main-font-size: 27px;
-    --big-font-size: 80px;
+    --big-font-size: 72px;
 }
 
 *{
@@ -24,10 +24,20 @@ html, body{
 .section {
     min-height: 100vh;
     width: 100%;
-    max-height: auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.section:last-of-type{
+    opacity: 1;
+}
+.part-section-30{
+    min-height: 30vh;
+}
+.part-section-50{
+    min-height: 50vh;
 }
 .section:last-of-type{
     min-height: 80px;
@@ -117,7 +127,7 @@ html, body{
 #header div.badge-holder{
     width: 500px;
     display: flex;
-    font-size: 30px;
+    font-size: 28px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
@@ -142,24 +152,22 @@ html, body{
     justify-content: flex-start;
 }
 #about div.content {
-    border-radius: 0px 40px;
-    padding: 30px;
+    padding: 0px 0px 30px 0px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     align-items: flex-start;
     margin: 0 auto;
+    height: auto;
+    overflow: hidden;
 }
-#about div.content > img{
-    width: 30%;
-    border-radius: 20px;
-}
+
 #about div.content > div.content-text {
-    margin-left: 20px;
-    width: 70%;
-    padding: 0 20px;
+    display: block;
+    width: 65%;
 }
-#about div.content > div.content-text > p{
+#about div.content > div.introduction{
+    width: 25%;
     text-align: justify;
     margin-bottom: 10px;
 }
@@ -172,16 +180,172 @@ html, body{
 }
 #about div.content > div.content-text ul > li {
     display: inline-block;
-}
-#about div.content > div.content-text ul > li > a{
-    display: block;
     font-size: 24px;
     margin-right: 20px;
+    position: relative;
 }
-#about div.content > div.content-text ul > li > a{
+#about div.content > div.content-text ul > li:hover {
+    cursor: pointer;
+}
+#about div.content > div.content-text ul > li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--redish-text-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+#about div.content > div.content-text ul > li.active::after{
+    width: 50%;
+    border-radius: 1px;
+}
+#about div.content > div.content-text ul > li.active::before{
+    content: '>';
+}
+#about div.content > div.content-text div.about-elements{
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+#about div.content > div.content-text div.about-elements > div.about-element{
     display: block;
+    min-height: 1px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0px;
+    transition: opacity 0.3s ease-in-out;
+}
+#about div.content > div.content-text div.about-elements > div.about-element ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#about div.content > div.content-text div.about-elements > div.about-element > ul li{
+    display: block;
+    margin-bottom: 10px;
+}
+#about div.content > div.content-text div.about-elements > div.about-element > ul li p{
+    font-size: 16px;
+}
+#about div.content > div.content-text div.about-elements > div.about-element > ul li p:first-of-type{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--redish-text-color)
+}
+#about div.content > div.content-text div.about-elements > div.about-element > ul li p:first-of-type::before{
+    content: '> ';
+}
+#about div.content > div.content-text div.about-elements > div.active{
+    min-height: 1px;
+    height: auto;
+}
+#about div.content > div.content-text div.about-elements > div.hidden{
+    display: none;
+}
+/* my-projects*/
+
+#my-projects div.flex-box{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+#my-projects div.flex-box > div.flex-element{
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: var(--main-text-color);
+    color: var(--main-bg-color);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: block;
+}
+#my-projects div.flex-box > div.flex-element:nth-child(1){
+    background-image: url('https://media.istockphoto.com/id/1329568867/pl/zdj%C4%99cie/makieta-smartfona-zbli%C5%BCenie-kobiety-za-pomoc%C4%85-telefonu-kom%C3%B3rkowego-z-pustym-ekranem-w-domu.jpg?s=2048x2048&w=is&k=20&c=A5FTxUWDBBiTP2eHW_oeax4tL2bJP9loQyy3nXcQQt0=');
+}
+#my-projects div.flex-box > div.flex-element:nth-child(2){
+    background-image: url('https://media.istockphoto.com/id/1314343964/pl/zdj%C4%99cie/najwy%C5%BCszej-klasy-jednostka-systemowa-do-gier-komputerowych-z-bliska.jpg?s=2048x2048&w=is&k=20&c=FQIgkDaMG3xrGemnvIjKdZFihX-DJDBo6ArB407u6DU=');
+}
+#my-projects div.flex-box > div.flex-element:nth-child(3){
+    background-image: url('https://media.istockphoto.com/id/1271620065/pl/zdj%C4%99cie/koncepcja-in%C5%BCynierii-systemu-in%C5%BCynier-pracuj%C4%85cy-w-biurze-gui.jpg?s=2048x2048&w=is&k=20&c=VBq7SSk5pNnfnq5iqrD2SMaRFRz0DlbN2Yf5FgcbORo=');
+}
+#my-projects div.flex-box > div.flex-element > div.info-box{
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(135,22,24);
+    background: linear-gradient(0deg, #871618 35%, #ffffff00 100%);
+    overflow: hidden;
+    transform-origin: bottom;
+    transition: transform 0.5s ease-in-out;
+    transform: scaleY(0);
+}
+#my-projects div.flex-box > div.flex-element:hover > div.info-box{
+    transform: scaleY(1);
+}
+#my-projects div.flex-box > div.flex-element > div.info-box div.title{
+    position: absolute;
+    text-align: center;
+    bottom: 300px;
+    display: block;
+    width: 100%;
+    color: var(--main-text-color);
+    font-weight: bold;
     font-size: 24px;
-    margin-right: 20px;
+}
+#my-projects div.flex-box > div.flex-element > div.info-box div.short-desc{
+    position: absolute;
+    text-align: center;
+    bottom: 250px;
+    display: block;
+    width: 100%;
+    color: var(--main-text-color);
+}
+#my-projects div.flex-box > div.flex-element > div.info-box a{
+    position: absolute;
+    bottom: 40px;
+    left: 170px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+#my-projects div.flex-box > div.flex-element > div.info-box a > img{
+    position: relative;
+    filter: invert(100%);
+}
+#my-projects > a{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 300px;
+    height: 70px;
+    border: solid 3px var(--redish-text-color);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 65px;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--redish-text-color);
+}
+#my-projects > a:hover{
+    cursor: pointer;
+    background-color: var(--redish-text-color);
+    color: var(--main-text-color);
 }
 /* other classes */
 
@@ -209,6 +373,7 @@ h1.section-title {
     margin: 0 auto;
     text-align: left;
     position: relative;
+    margin-bottom: 30px;
 }
 h1.section-title::after {
     content: '';
@@ -219,7 +384,27 @@ h1.section-title::after {
     left: 0;
     bottom: -6px;
 }
-
+h1.title-right {
+    text-align: right;
+}
+h1.title-right::after {
+    content: '';
+    width: 50%;
+    background-color: var(--redish-text-color);
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+}
+.fade-in-out-anim{
+    opacity: 1;
+}
+.type-indicator{
+    visibility: hidden;
+    animation-name: type-indicator-anim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
 @media screen and (max-width: 1000px){
     #header nav > ul{
         display: none;
@@ -253,17 +438,36 @@ h1.section-title::after {
         align-items: center;
         flex-direction: column;
     }
+    #about div.content > div.introduction,
     #about div.content > div.content-text  {
         width: 100%;
-        margin: 0;
+        margin-bottom: 20px;
         padding: 0;
     }
-    #about div.content > img{
-        display: none;
+    #about div.content > div.content-text > ul li{
+        margin-bottom: 5px;
+        display: block;
+    }
+    .section{
+        opacity: 1;
     }
 }
 @media screen and (max-width: 600px) {
     #header div.content > div > p{
         font-size: 40px;
+    }
+}
+@keyframes type-indicator-anim{
+    0% {
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
     }
 }

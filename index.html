@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PiotrB</title>
     <link href="style/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <script src="scripts/script.js"></script>
-
 </head>
 <body>
     <div class="section" id="header">
@@ -24,10 +23,7 @@
                 <li onclick="displayMenu()">
                     <a href="#about">About</a>
                 </li>
-                <li onclick="displayMenu()">
-                    <a href="#my-projects">My Projects</a>
-                </li>
-                <li onclick="displayMenu()">
+                <li onclick="displayMenu() ">
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
@@ -40,7 +36,7 @@
         <div class="content">
             <div>
                 <p>Hi,</p>
-            <p>I'm <span class="red">Piotr.</span></p>
+            <p>I'm <span class="red">&lt;Piotr&gt;.</span><span class="type-indicator">|</span></p>
             </div>
             <div class="badge-holder">
                 <div class="badge">
@@ -76,41 +72,96 @@
             </div>
         </div>
     </div>
-    <div class="section" id="about">
+    <div class="section part-section-30" id="about">
         <h1 class="section-title">About me</h1>
         <div class="content">
-            <img src="img/placeholder.png" alt="about-photo">
+            <div class="introduction">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate convallis tellus, ut luctus lorem mattis non. Aliquam elementum ac nisl nec ultricies. Nunc placerat augue mauris. Suspendisse cursus dictum nisl ac eleifend. Duis mattis vitae lectus nec blandit. Nullam eu pharetra arcu. Etiam dignissim, sem vel mattis egestas, sapien purus efficitur tellus, vitae vehicula augue ante at nunc.</div>
             <div class="content-text">
-                <p>Hello my name is Piotr. I'm 24 years old IT student from Poland, and this website serves as my portfolio.</p>
                 <ul>
-                    <li><a onclick="" class="active">Skills</a></li>
-                    <li><a onclick="">Experience</a></li>
-                    <li><a onclick="">Education</a></li>
+                    <li onclick="aboutElements(this, 0)" class="about-menu active">Skills</li>
+                    <li onclick="aboutElements(this, 1)" class="about-menu">Experience</li>
+                    <li onclick="aboutElements(this, 2)" class="about-menu">Education</li>
                 </ul>
                 <div class="about-elements">
                     <div class="about-element active">
-                        my skills here
+                        <ul>
+                            <li>
+                                <p>HTML</p>
+                                <p>junior</p>
+                            </li>
+                            <li>
+                                <p>CSS</p>
+                                <p>junior</p>
+                            </li>
+                            <li>
+                                <p>JS</p>
+                                <p>junior</p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="about-element">
-                        my experience here
+                    <div class="about-element hidden">
+                        <ul>
+                            <li>
+                                <p>September 2022 - February 2023</p>
+                                <p>Internship at xyz</p>
+                            </li>
+                            <li>
+                                <p>Work 2</p>
+                                <p>something about work</p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="about-element">
-                        my education here
+                    <div class="about-element hidden">
+                        <ul>
+                            <li>
+                                <p>Computer Science 2019-2023</p>
+                                <p>more info here</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section" id="my-projects">
-        <p>
-            Under construction;
-        </p>
+    <div class="section part-section-50" id="my-projects">
+        <h1 class="section-title title-right">My work</h1>
+        <div class="flex-box">
+            <div class="flex-element">
+                <div class="info-box">
+                    <div class="title">Project 1</div>
+                    <div class="short-desc">Small project showcasing xyz.</div>
+                    <a href="#my-projects">
+                        <img src="img/link-ico.png"/>
+                    </a>
+                </div>
+            </div>
+            <div class="flex-element">
+                <div class="info-box">
+                    <div class="title">Project 2</div>
+                    <div class="short-desc">Small project showcasing xyz.</div>
+                    <a href="#my-projects">
+                        <img src="img/link-ico.png"/>
+                    </a>
+                </div>
+            </div>
+            <div class="flex-element">
+                <div class="info-box">
+                    <div class="title">Project 3</div>
+                    <div class="short-desc">Small project showcasing xyz.</div>
+                    <a href="#my-projects">
+                        <img src="img/link-ico.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#">See more</a>
     </div>
-    <div class="section" id="contact">
+    <div class="section part-section-50" id="contact">
         asdfgsdfhgfsdtgh
     </div>
     <div class="section" id="footer">
         <p>2023 &copy; Piotr Będkowski</p>
     </div>
+    <script src="scripts/anim.js"></script>
 </body>
 </html>
